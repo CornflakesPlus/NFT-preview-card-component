@@ -1,0 +1,171 @@
+
+/* BASE STYLES GENERAL */
+
+
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color:  hsl(217, 54%, 11%);
+    padding: 10px;
+}
+
+
+main {
+    max-width: 282px;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    background-color: hsl(216, 50%, 16%);
+    box-shadow: 1px 20px 30px 30px rgba(2,5,50,.5);
+}
+
+
+h2 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+}
+
+
+p {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+
+hr {
+    background-color:hsl(215, 32%, 27%);
+    height: 1px;
+    border: none;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/* CLASS STYLES GENERAL */
+
+
+
+.svg {
+    position: relative;
+    top: 2px;
+}
+
+
+.svg-1 {
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+
+.svg-2 {
+    color:hsl(215, 51%, 70%);
+    font-weight: 400;
+}
+
+
+.main-img {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.profile-pic {
+    border-radius: 100%;
+    border: solid  white 2px;
+}
+
+
+.profile-name {
+    color: hsl(0, 0%, 100%);
+}
+
+
+.avatar-container {
+    margin-top: 25px;
+}
+
+
+.avatar-text {
+    position: relative;
+    float: right;
+    right: 20px;
+}
+
+
+
+
+/* CLASS STYLES SPECIAL */
+
+
+/* Class style | Overlay Effect */
+
+.image-container {
+    position: relative;  /* position set to relative for .overlay to work properly */
+}
+
+
+.main-img {
+    display: block;    /* Set to display:block to avoid weird behaviours and to set margin auto */
+    margin: 0 auto;
+}
+
+
+.overlay {
+    display: flex;     /* Display set to Flex for centering .second-img */
+    position: absolute;
+    top: 0;            /* top:0 in relation to position:absolute */
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: all .3s ease;  /* transition is used to relax down the sudden change when hover is used */
+    opacity: 0;               /* opacity set to 0 for the overlay effect to stay hidden untill changed */
+    background-color: hsl(178, 100%, 50%);
+}
+
+
+.second-img {
+    align-self: center;
+    margin: 0 auto;
+}
+
+
+.image-container:hover .overlay {  
+    opacity: .8;
+    cursor: pointer;
+}
+
+
+
+/* Class style | General Hover Effect */
+
+.heading-2:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.profile-name:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+
+
+/* END OF CSS */
+
+
+/* Notes| 
+    Trying to achieve the overlay effect ( One image over the another, only to display the second image
+    if the first image is in hover state) was a pain in the......head, perhaps the hardest part of this
+    project. Had to conduct a load of research for the overlay effect to be successfull. One particular
+    YouTube video did a quite good job of explaining, which showed me the right direction. After that
+    I experimented until the desired result was achieved.
+*/
