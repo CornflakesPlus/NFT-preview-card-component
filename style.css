@@ -4,17 +4,24 @@
 
 
 body {
+
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Outfit', sans-serif;
     font-size: 18px;
     background-color:  hsl(217, 54%, 11%);
     padding: 10px;
+
 }
 
 
 main {
+    
     max-width: 282px;
     padding: 20px;
-    margin: 15px auto;
     border-radius: 10px;
     background-color: hsl(216, 50%, 16%);
     box-shadow: 1px 20px 30px 30px rgba(2,5,50,.5);
@@ -22,8 +29,13 @@ main {
 
 
 h2 {
-    color: hsl(0, 0%, 100%);
     font-weight: 400;
+}
+
+a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    border: none;
 }
 
 
@@ -48,6 +60,12 @@ ul {
 }
 
 
+footer {
+    position: absolute;
+    bottom: 20px;
+}
+
+
 
 
 /* CLASS STYLES GENERAL */
@@ -57,6 +75,7 @@ ul {
 .svg {
     position: relative;
     top: 2px;
+    
 }
 
 
@@ -75,6 +94,7 @@ ul {
 .main-img {
     border-radius: 10px;
     object-fit: cover;
+    max-width: 100%;
 }
 
 
@@ -147,7 +167,7 @@ ul {
 
 /* Class style | General Hover Effect */
 
-.heading-2:hover {
+a:hover {
     color: hsl(178, 100%, 50%);
     cursor: pointer;
 }
